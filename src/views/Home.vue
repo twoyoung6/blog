@@ -11,7 +11,7 @@
         </div>
         <div class="topic">
           <a href="">主 页</a>
-          <a href="">博 客</a>
+          <a href="">技 术</a>
           <a href="">定 格</a>
           <a href="">壹 句</a>
           <a href="">阅 读</a>
