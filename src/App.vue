@@ -10,7 +10,7 @@
       </div>
       <div class="topic">
         <a href="/">主 页</a>
-        <a href="https://juejin.cn/user/2823201591398910/posts" target="blank">博 客</a>
+        <a href="https://juejin.cn/user/2823201591398910/posts" target="blank">技 术</a>
         <a href="https://twoyoung.tuchong.com" target="blank">定 格</a>
         <a href="https://shimo.im/docs/u8JybsRUBCsB2rCb" target="blank">壹 句</a>
         <a href="https://shimo.im/docs/3ObqX5PKkbUSfacf" target="blank">阅 读</a>
@@ -33,9 +33,7 @@
 </template>
 
 <script>
-export default {
-  name: "App",
-};
+export default {};
 </script>
 
 <style lang="less">
