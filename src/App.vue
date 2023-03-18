@@ -1,7 +1,4 @@
 <template>
-  <video id="v1" autoplay loop muted>
-    <source src="./assets/bg_kuxuan.mp4" type="video/mp4" />
-  </video>
   <a-layout>
     <a-layout-header>
       <div class="logo">
@@ -29,42 +26,50 @@
     <a-layout-footer>
       <div class="fo">Copyright © 2022-2025 TwoYoung</div> | <a  class="fo" href="https://beian.miit.gov.cn/#/Integrated/index" target="blank">湘ICP备2020022591号</a>
     </a-layout-footer>
+    <a-carousel autoplay :dots="false" effect="fade" :autoplaySpeed="15000">
+    <img :src="img" alt="" v-for="(img,index) in imgs" :key="index">
+  </a-carousel>
   </a-layout>
 </template>
 
 <script>
-export default {};
+export default {
+   data(){
+     return{
+       imgs:[ 
+         require('./assets/bg (1).jpg'),
+         require('./assets/bg (2).jpg'),
+         require('./assets/bg (3).jpg'),
+         require('./assets/bg (4).jpg'),
+         require('./assets/bg (5).jpg'),
+         require('./assets/bg (6).jpg'),
+       ]
+     }
+   }
+};
 </script>
 
 <style lang="less">
 #app {
   color: #2c3e50;
-  video {
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto;
-    /*加滤镜*/
-    // filter: blur(5px); //背景模糊设置
-    // -webkit-filter: grayscale(100%);
-    // filter: grayscale(100%); //背景灰度设置
-    z-index: -11;
-  }
-  source {
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto;
-  }
-
+  box-sizing: border-box;
   .ant-layout {
+    position: relative;
     min-height: 100vh;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     background: unset;
+    .ant-carousel {
+      position: absolute;
+      z-index: -1; 
+      top: -50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      object-fit: cover;
+      overflow: hidden;
+    }
     .ant-layout-header {
       background: #000;
       height: unset;
